@@ -5,3 +5,4 @@ Para abordar el desarrollo primero implementare un webserver sencillo, seguido a
 pytest
 mysql.connector
 json
+requests
