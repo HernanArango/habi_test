@@ -3,3 +3,5 @@ Para abordar el desarrollo primero implementare un webserver sencillo, seguido a
 
 ## Librerías Usadas
 pytest
+mysql.connector
+json
