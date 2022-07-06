@@ -10,8 +10,9 @@ class PropertySerializer:
                 "city": property_fields[2],
                 "price": property_fields[3],
                 "description": property_fields[4],
-                "actual_state": property_fields[5]
                 # "year": property_fields[5],
+                "actual_state": property_fields[6]
+
             }
             property_list.append(property_dict)
 
