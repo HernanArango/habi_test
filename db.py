@@ -4,8 +4,8 @@ engine = MySQL()
 
 
 class DB:
-
-    def query(self, sql, params):
+    @staticmethod
+    def query(sql, params=None):
         return engine.query(sql, params)
 
     def delete(self):
