@@ -59,3 +59,10 @@ by default show only 10 result
 |--|----------|----------------------------|
 | Page |/?page=number    | Filter by city    |
 | Per Page |/?per_page=number | Filter by year          |
+
+
+## Point 2 (Likes)
+![MER Like](./info/requerimiento2.png?raw=true "MER")
+
+Table relating users and properties is added. Each record will be equivalent to a like.  The like field is also added
+in the properties table to keep a total of these and not calculate it every time it is needed.
