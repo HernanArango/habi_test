@@ -1,0 +1,6 @@
+/* filter examples */
+{
+  "city": "/?city=bogota",
+  "year": "/?year=2020",
+  "actual_state": "",
+}
