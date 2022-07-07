@@ -66,3 +66,22 @@ by default show only 10 result
 
 Table relating users and properties is added. Each record will be equivalent to a like.  The like field is also added
 in the properties table to keep a total of these and not calculate it every time it is needed.
+```
+CREATE TABLE IF NOT EXISTS `habi_db`.`like` (
+  `idlike` INT NOT NULL,
+  `auth_user_id` INT(11) NOT NULL,
+  `property_id` INT(11) NOT NULL,
+  PRIMARY KEY (`idlike`),
+  INDEX `fk_like_auth_user1_idx` (`auth_user_id` ASC) VISIBLE,
+  INDEX `fk_like_property1_idx` (`property_id` ASC) VISIBLE,
+  UNIQUE KEY `my_uniq_id` (`auth_user_id`,`property_id`)
+  CONSTRAINT `fk_like_auth_user1`
+    FOREIGN KEY (`auth_user_id`)
+    REFERENCES `habi_db`.`auth_user` (`id`)
+    ON DELETE CASCADE
+  CONSTRAINT `fk_like_property1`
+    FOREIGN KEY (`property_id`)
+    REFERENCES `habi_db`.`property` (`id`)
+    ON DELETE CASCADE
+)
+```

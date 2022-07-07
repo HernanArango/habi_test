@@ -1,7 +1,7 @@
 from db import DB as db
 from modules.property.serializer import PropertySerializer
 
-
+# is important filter the params for evite the sql injection, but not in this test
 def get_properties(params):
     page = 0
     per_page = 10
