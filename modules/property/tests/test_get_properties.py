@@ -23,3 +23,21 @@ class TestProperties:
         assert "price" in response_json
         assert "description" in response_json
         assert "actual_state" in response_json
+        assert len(response_json) == 5
+
+    @staticmethod
+    def test_get_properties_by_city():
+        filter_city = "?city=bogota"
+        response = requests.get(url=url + filter_city)
+        response_json = json.loads(response.text)
+        response_json = response_json[0]
+        assert "bogota" in response_json["city"]
+
+    @staticmethod
+    def test_get_properties_by_actual_state():
+        filter_state = "?actual_state=vendido"
+        response = requests.get(url=url + filter_state)
+        response_json = json.loads(response.text)
+        response_json = response_json[0]
+        assert "vendido" in response_json["actual_state"]
+
